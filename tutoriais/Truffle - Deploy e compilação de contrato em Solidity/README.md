@@ -26,11 +26,11 @@ Neste tutorial será explicado todo o processo de deploy de um smart contract ut
 
 Primeiramente, é necessário criar uma nova pasta ou abrir uma pasta já existente do projeto que deseja fazer o deploy. Depois disso, abra o cmd na sua máquina e direcione-se à pasta que foi aberta ou abra um novo terminal em seu VSCode(Ctrl + Shift + ‘).
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled.png)
+![Untitled](images/Untitled.png)
 
 Observação: Caso opte por abrir o terminal no VSCode, esteja ciente que ele precisa ser um terminal “Command Prompt”, pois em alguns passos do tutorial existe uma limitação de alguns comandos para terminais como PowerShell. Para checar e alterar caso necessário, siga a seguinte instrução:
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%201.png)
+![Untitled](images/Untitled%201.png)
 
 ## 2. <span id="2-instalação-do-truffle">Instalação do Truffle</span>
 
@@ -58,7 +58,7 @@ Note que algumas pastas foram criadas. Uma das pastas é a “contracts”, a qu
 
 Outra pasta criada foi a “migrations”. Dentro dela, crie um arquivo “.js”(JavaScript). O nome desse arquivo precisa iniciar com uma numeração ordenada começando em 1 acompanhada de um “_”(exemplo: 1_deployContract.js) para que seja executado em ordem por convenções da biblioteca.
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%202.png)
+![Untitled](images/Untitled%202.png)
 
 Agora, volte para o terminal e execute o seguinte comando para criar um pacote que cria o arquivo “package.json”, pulando a parte de configuração do package(para isso a função -y).
 
@@ -113,7 +113,7 @@ goerli: {
     },
 ```
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%203.png)
+![Untitled](images/Untitled%203.png)
 
 Agora, é necessário deixar somente as linhas “provider” e “network_id”, removendo todas as outras.
 
@@ -124,7 +124,7 @@ goerli: {
     },
 ```
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%204.png)
+![Untitled](images/Untitled%204.png)
 
 **Observação**: “provider” vai ser responsável por pegar a mnemonic phrase de quem está efetuando o deploy e a chave, enquanto “network_id” indica o id da rede na qual o contrato será deployado.
 
@@ -140,7 +140,7 @@ npm install dotenv
 
 Com o “dotenv” instalado, crie o arquivo “.env” na raiz para criar e armazenar as variáveis que deseja “esconder” nele.
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%205.png)
+![Untitled](images/Untitled%205.png)
 
 **Observação**: O “.env” serve para imprimir uma lista de variáveis de ambiente ou para executar outro utilitário em um ambiente alterado sem necessidade de modificar o ambiente existente.
 
@@ -153,7 +153,7 @@ const { MNEMONIC, PROJECT_ID } = process.env;
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 ```
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%206.png)
+![Untitled](images/Untitled%206.png)
 
 Note que a linha 47 comentada é justamente o que é instanciado em “provider” na linha 86(parte do Goerli descomentada anteriormente) para criar a configuração de quem está efetuando o deploy, mas para que isso funcione, execute o seguinte código no terminal:
 
@@ -165,9 +165,9 @@ npm install @truffle/hdwallet-provider
 
 O arquivo gitignore tem a função de armazenar os arquivos que deseja que sejam ocultados quando o projeto for exposto no GitHub, como API KEY e MNEMONIC Phrase por exemplo. Por isso, é essencial que você crie o arquivo “.gitignore” na raíz e inclua o “.env” nele. 
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%207.png)
+![Untitled](images/Untitled%207.png)
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%208.png)
+![Untitled](images/Untitled%208.png)
 
 ```jsx
 .env
@@ -185,17 +185,17 @@ Com a conta criada, guarde ela na variável MNEMONIC no seu arquivo “.env”.
 MNEMONIC = "sua mnemonic phrase";
 ```
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%209.png)
+![Untitled](images/Untitled%209.png)
 
 ### 5.2 <span id="52-api-key-do-infura">API KEY do Infura</span>
 
 Agora que já preenchemos a MNEMONIC do provider, é preciso conseguir uma private key de um node para efetuar esse deploy. Para isso, como é de maior complexidade se tornar um node, recomendamos que você entre no site da [Infura](https://app.infura.io/register) para conseguir uma API KEY gratuitamente. A Infura é um empresa que tem nodes disponíveis para uso, basta criar uma conta “free”(sem informar dados do cartão de crédito), que já se obtém uma API KEY para ser utilizada.
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%2010.png)
+![Untitled](images/Untitled%2010.png)
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%2011.png)
+![Untitled](images/Untitled%2011.png)
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%2012.png)
+![Untitled](images/Untitled%2012.png)
 
 Agora que você conseguiu acessar uma API KEY, inclua no arquivo “.env” a variável “INFURA_API_KEY”.
 
@@ -205,7 +205,7 @@ MNEMONIC = "sua mnemonic phrase";
 INFURA_API_KEY = "api key do infura";
 ```
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%2013.png)
+![Untitled](images/Untitled%2013.png)
 
 A mesma variável deve ser alterada na linha 45 do arquivo “truffle-config.js”, onde troca-se a variável PROJECT_ID por INFURA_API_KEY.
 
@@ -216,7 +216,7 @@ const { MNEMONIC, INFURA_API_KEY } = process.env;
 const HDWalletProvider = require('@truffle/hdwallet-provider');
 ```
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%2014.png)
+![Untitled](images/Untitled%2014.png)
 
 É necessário mudar a URL inteira do que seria o “INFURA_API_KEY” no provider(linha 86) do arquivo “truffle-config.js” e substituir pela URL da Infura:
 
@@ -243,15 +243,15 @@ Para resolvermos esse último problema, basta entrar na [Goerli Faucet](https://
 
 **Observação**: Esse é um dinheiro “fictício” que a testnet permite que você use justamente para efetuar testes de transações e deploys.
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%2015.png)
+![Untitled](images/Untitled%2015.png)
 
 Você precisa checar se você realmente recebeu a quantia. Para isso, entre na sua Metamask, clique na sua foto, vá até “Configurações/Settings”>“Avançado/Advanced” e ative a configuração “Mostrar redes de teste/Show test Network”. Agora, basta clicar em “Ethereum Mainet”, alterar para “Goerli test Network” e verificar seu saldo(deve estar positivo).
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%2016.png)
+![Untitled](images/Untitled%2016.png)
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%2017.png)
+![Untitled](images/Untitled%2017.png)
 
-![Untitled](Truffle%20Deployment%20Tutorial%20f1af27791f49499db614b1571c18a764/Untitled%2018.png)
+![Untitled](images/Untitled%2018.png)
 
 ### 6.2 <span id="62-deploy">Deploy</span>
 

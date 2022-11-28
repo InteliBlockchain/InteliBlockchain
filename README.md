@@ -9,9 +9,9 @@ Bem vindo ao repositorio de aprendizado do Inteli Blockchain. O foco desse repos
 
 Indo para [Tutoriais](/tutoriais/) você encontrará uma lista de tutoriais que podem ser feitos para auxiliar o seu desenvolvimento e a configuração do seu ambiente para as atividades e projetos que serão realizados no clube.
 
-- [1 - Instalação, criação e setup de projeto com React](/tutoriais//1-%20Instala%C3%A7%C3%A3o%2C%20cria%C3%A7%C3%A3o%20e%20setup%20de%20projeto%20com%20React/README.md)
+<!-- - [1 - Instalação, criação e setup de projeto com React](/tutoriais//1-%20Instala%C3%A7%C3%A3o%2C%20cria%C3%A7%C3%A3o%20e%20setup%20de%20projeto%20com%20React/README.md) -->
 
-- [2 - Deploy e compilação de contrato em Solidity com Truffle](/tutoriais/2%20-%20Deploy%20e%20compila%C3%A7%C3%A3o%20de%20contrato%20em%20Solidity%20com%20Truffle/README.md)
+- [Truffle - Deploy e compilação de contrato em Solidity](/tutoriais/Truffle%20-%20Deploy%20e%20compila%C3%A7%C3%A3o%20de%20contrato%20em%20Solidity/README.md)
 
 </div>
 
