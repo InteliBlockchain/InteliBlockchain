@@ -247,11 +247,23 @@ Para resolvermos esse último problema, basta entrar na [Goerli Faucet](https://
 
 Você precisa checar se você realmente recebeu a quantia. Para isso, entre na sua Metamask, clique na sua foto, vá até “Configurações/Settings”>“Avançado/Advanced” e ative a configuração “Mostrar redes de teste/Show test Network”. Agora, basta clicar em “Ethereum Mainet”, alterar para “Goerli test Network” e verificar seu saldo(deve estar positivo).
 
+<div style="display: flex; justify-content: space-between;">
+<div width="33%">
+
 ![Untitled](images/Untitled%2016.png)
+
+</div>
+<div width="33%">
 
 ![Untitled](images/Untitled%2017.png)
 
+</div>
+<div width="33%">
+
 ![Untitled](images/Untitled%2018.png)
+
+</div>
+</div>
 
 ### 6.2 <span id="62-deploy">Deploy</span>
 
