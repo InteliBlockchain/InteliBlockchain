@@ -6,6 +6,7 @@
 2. [Instalação do React](#2-instalação-do-react)
 3. [Criação de projeto](#3-criação-de-projeto)
 4. [Conclusão](#4-conclusão)
+5. [Autoria](#autoria)
 
 ## <p id="instalação">1. Instalação do Node.js</p>
 <p style='color: rgba(0,0,0,0.5);'>Obs.: Se você já tiver o Node.js instalado, e tiver checado sua instalação, pule para o 2º passo.</p>
@@ -185,7 +186,7 @@ Caso tenha alguma dúvida, entre em contato através do Slack ou Whatsapp!
 ## <span id="autoria">Autoria</span>
 
 Marcelo Feitoza - Autor
-Contato: [www.linkedin.com/in/victor-severiano-de-carvalho-b57a05237](http://www.linkedin.com/in/victor-severiano-de-carvalho-b57a05237)
+Contato: [www.linkedin.com/in/marcelofeitoza7](https://www.linkedin.com/in/marcelofeitoza7/)
 
 Victor Severiano de Carvalho - Revisor
-Contato: [www.linkedin.com/in/marcelofeitoza7](https://www.linkedin.com/in/marcelofeitoza7/)
+Contato: [www.linkedin.com/in/victor-severiano-de-carvalho-b57a05237](http://www.linkedin.com/in/victor-severiano-de-carvalho-b57a05237)
