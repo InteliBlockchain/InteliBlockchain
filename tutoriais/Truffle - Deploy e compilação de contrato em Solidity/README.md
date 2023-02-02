@@ -182,7 +182,7 @@ Para os próximos passos, iremos precisar da MNEMONIC Phrase da wallet que desej
 Com a conta criada, guarde ela na variável MNEMONIC no seu arquivo “.env”.
 
 ```jsx
-MNEMONIC = "sua mnemonic phrase";
+MNEMONIC = "sua mnemonic phrase"
 ```
 
 ![Untitled](images/Untitled%209.png)
@@ -200,9 +200,9 @@ Agora que já preenchemos a MNEMONIC do provider, é preciso conseguir uma priva
 Agora que você conseguiu acessar uma API KEY, inclua no arquivo “.env” a variável “INFURA_API_KEY”.
 
 ```jsx
-MNEMONIC = "sua mnemonic phrase";
+MNEMONIC = "sua mnemonic phrase"
 
-INFURA_API_KEY = "api key do infura";
+INFURA_API_KEY = "api key do infura"
 ```
 
 ![Untitled](images/Untitled%2013.png)
