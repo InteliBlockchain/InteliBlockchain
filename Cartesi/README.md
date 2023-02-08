@@ -61,7 +61,7 @@ Para entender os códigos-fontes dos contratos inteligentes neste repositório, 
 
 Mais informações em: https://github.com/cartesi/rollups
 
-# O Repositório "cartesi/openapi-interfaces"
+## O Repositório "cartesi/openapi-interfaces"
 
 O repositório "cartesi/openapi-interfaces" no GitHub fornece uma implementação de exemplo de uma interface OpenAPI para a plataforma Cartesi. OpenAPI é uma especificação para descrever a interface de programação de aplicativos (API, na sigla em inglês) de maneira clara e precisa. 
 
