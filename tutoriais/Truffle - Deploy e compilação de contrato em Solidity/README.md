@@ -99,6 +99,17 @@ module.exports = function(deployer) {
 
 ************************IMPORTANTE:************************ Em ‘nomeContrato’, estamos nos referindo não ao nome do arquivo, mas, sim, ao nome que acompanha a palavra-chave “contract” dentro do arquivo “.sol”.
 
+************************IMPORTANTE:************************ Caso o seu contrato receba argumentos na função constructor, eles devem ser passados dentro da função deployer.deploy(). Segue um exemplo:
+
+```jsx
+const contrato = artifacts.require("nomeContrato");
+
+module.exports = function(deployer) {
+    // deployment steps
+    deployer.deploy(contrato, argumento1DoConstructor, argumento2DoConstructor);
+  };
+```
+
 ### 3.2 <span id="32-selecionando-a-rede">Selecionando a rede</span>
 
 Depois de informar qual contrato desejamos, é preciso selecionar a rede na qual o deploy será feito. Para isso, vá no arquivo “truffle-config.js”, criado com o comando “npm install truffle” anteriormente, procure na linha 85 a testnet “goerli” e descomente a mesma até a chave (“}”) na linha 91, que fecha o objeto.
@@ -222,7 +233,7 @@ const HDWalletProvider = require('@truffle/hdwallet-provider');
 
 ```jsx
 goerli: {
-      provider: () => new HDWalletProvider(MNEMONIC, `https://goerli.infura.io/v3/${process.env.INFURA_API_KEY}`),
+      provider: () => new HDWalletProvider(MNEMONIC, `https://goerli.infura.io/v3/${INFURA_API_KEY}`),
       network_id: 5,       // Goerli's id
     },
 ```
