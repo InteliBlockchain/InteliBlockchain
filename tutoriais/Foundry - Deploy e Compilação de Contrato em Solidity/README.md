@@ -18,18 +18,26 @@
 
 Este tutorial visa explicar o processo de compilação e deploy de um smart contract utilizando Foundry, uma ferramenta moderna e eficiente para o desenvolvimento de smart contracts em Solidity.
 
-- **Requisitos:** É necessário ter instalado o Rust e Git.
-
-1. [Instalação do Rust](https://www.rust-lang.org/tools/install)
-2. [Instalação do Git](https://git-scm.com/downloads)
+- **Requisitos:** É necessário ter instalado o Git.
+  
+1. [Instalação do Git](https://git-scm.com/downloads)
 
 ## 2. <span id="2-instalação-do-foundry">Instalação do Foundry</span>
 
 [Foundry](https://book.getfoundry.sh/getting-started/installation) é composto por duas ferramentas principais: `forge` para compilação e teste de contratos, e `cast` para interações ad-hoc com a blockchain. Para instalar o Foundry, execute:
 
+**Utilizando zsh:**
+
 ```sh
 curl -L https://foundry.paradigm.xyz | bash
 foundryup
+```
+
+**Utilizando bash:**
+
+```sh
+curl -L https://foundry.paradigm.xyz | bash
+bash foundryup
 ```
 
 Continuando a partir da instalação do Foundry, o próximo passo é a criação de um novo projeto, introdução de um contrato básico, como um simples "Hello, World!", e então partir para as ações do Foundry de compilar, selecionar a rede, configurar o arquivo `.env` com a MNEMONIC e quaisquer outras configurações necessárias, até o deploy na rede da Sepolia.
