@@ -51,19 +51,9 @@ Prepare-se para configurar o ambiente de desenvolvimento, escrever o código Sol
 
 ---
 
-## 2. <span id="2-instalação-do-foundry">Instalação do Foundry</span
+## 2. <span id="2-instalação-do-foundry">Instalação do Foundry</span>
 
-O [Foundry](https://book.getfoundry.sh/getting-started/installation)  é um conjunto de ferramentas de desenvolvimento de contratos inteligentes em Solidity que inclui `forge` para compilar e testar contratos e `cast` para interações ad-hoc com a Ethereum blockchain.
-
-### Requisitos:
-
-- Acesso a um terminal em sistemas UNIX-like (Linux, macOS) ou Windows Subsystem for Linux (WSL) para usuários Windows.
-
-### Instruções para instalação:
-
-Para instalar o Foundry, execute os comandos a seguir no seu terminal. Certifique-se de estar operando em um ambiente UNIX ou WSL se estiver usando Windows, conforme as instruções na seção anterior.
-
-1. Abra o terminal e execute o seguinte comando para baixar e instalar o Foundry:
+[Foundry](https://book.getfoundry.sh/getting-started/installation) é composto por duas ferramentas principais: `forge` para compilação e teste de contratos, e `cast` para interações ad-hoc com a blockchain. Para instalar o Foundry, execute:
 
 ```sh
 curl -L https://foundry.paradigm.xyz | bash
@@ -73,6 +63,13 @@ curl -L https://foundry.paradigm.xyz | bash
 
 ```sh
 foundryup
+```
+
+**Utilizando bash:**
+
+```sh
+curl -L https://foundry.paradigm.xyz | bash
+bash foundryup
 ```
 ![Imagem representativa da instalação do Foundry](./images/foundryup.png)
 
@@ -460,27 +457,20 @@ Suponha que a resposta do comando `cast call` seja:
 Você pode decodificar essa resposta usando `xxd` da seguinte forma:
 
 ```sh
-echo <resposta_hexadecimal> | xxd -r -p
+source .env && forge script script/DeployHelloWorld.s.sol --rpc-url $RPC_URL --private-key $PRIVATE_KEY --broadcast
 ```
 
-Substitua `<resposta_hexadecimal>` pelo hex retornado pelo `cast call`. O resultado deve ser "Hello, World!".
+Este comando vai compilar seu contrato e fazer o deploy na rede Sepolia.
 
-### Conclusão do Teste
+![alt text](./images/compile.png)
 
-Testar seu contrato deployado é um passo crucial para garantir que ele está funcionando conforme o esperado na rede blockchain. Utilizando a ferramenta `cast` do Foundry, você pode facilmente interagir com o contrato e validar suas funcionalidades.
+## 9. <span id="8-verificando-o-deploy-na-rede">Verificando o Deploy na Rede</span>
 
-Lembre-se de sempre verificar a segurança e a eficácia do seu contrato antes de movê-lo para um ambiente de produção ou antes de interagir com ativos de valor real.
+Após o deploy, use a chave de API do Alchemy para verificar o status do seu contrato no [Etherscan Sepolia](https://sepolia.etherscan.io/) inserindo o endereço do contrato.
 
-Com o sucesso dos testes, você conclui o processo de desenvolvimento, compilação, deploy e verificação do seu contrato inteligente Solidity com o Foundry, abrindo caminho para desenvolvimentos mais avançados e a integração com aplicações descentralizadas (dApps).
+![alt text](./images/deployed.png)
 
----
+## <span id="autoria">Autoria</span>
 
-## Autoria
-
-A conclusão do tutorial sobre como compilar e deployar um contrato inteligente usando Foundry não seria completa sem reconhecer aqueles que contribuíram para seu desenvolvimento e revisão.
-
-### Contribuidores:
-
-- Marcelo Gomes Feitoza - Para dúvidas, comentários ou sugestões sobre este tutorial, sinta-se à vontade para entrar em contato através do [LinkedIn](https://www.linkedin.com/in/marcelofeitoza7/) ou [GitHub](https://github.com/marcelofeitoza). (Substitua "#" pelo link adequado para seu perfil no LinkedIn e GitHub.)
-  
-- Victor Severiano de Carvalho - Para dúvidas, comentários ou sugestões sobre este tutorial, sinta-se à vontade para entrar em contato através do [LinkedIn](https://www.linkedin.com/in/victor-severiano-de-carvalho/) ou [GitHub](https://github.com/vict0rcarvalh0). (Substitua "#" pelo link adequado para seu perfil no LinkedIn e GitHub.)
+- [Marcelo Feitoza](https://www.linkedin.com/in/marcelofeitoza7/)
+- [Victor Carvalho](https://www.linkedin.com/in/victor-severiano-de-carvalho/)
