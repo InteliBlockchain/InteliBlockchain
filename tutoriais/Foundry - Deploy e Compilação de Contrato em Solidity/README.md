@@ -2,7 +2,7 @@
 
 ## Índice
 1. [Introdução](#1-introdução)
-    1.1. [Aviso Importante para Usuários do Windows](#para-usuários-do-window)
+    - 1.1. [Aviso Importante para Usuários do Windows](#para-usuários-do-window)
 2. [Instalação do Foundry](#2-instalação-do-foundry)
 3. [Criando um Projeto Foundry](#3-criando-um-projeto-foundry)
 4. [Introduzindo um Contrato Básico](#4-introduzindo-um-contrato-básico)
@@ -11,17 +11,17 @@
 7. [Obtendo URL RPC via Alchemy](#7-obtendo-url-rpc-via-alchemy)
 8. [Configurando Variáveis de Ambiente](#8-configurando-variáveis-de-ambiente)
 9. [Deploy do Contrato](#9-deploy-do-contrato)
-    9.1. [Executando o Deploy](#91-executando-o-deploy)
+    - 9.1. [Executando o Deploy](#91-executando-o-deploy)
 10. [Verificando o Deploy na Rede](#10-verificando-o-deploy-na-rede)
 11. [Testando o Contrato Deployado](#11-testando-o-contrato-deployado)
-    11.1. [Interagindo com o Contrato](#111-interagindo-com-o-contrato)
-    11.2. [Decodificando a Resposta](#112-decodificando-a-resposta)
+    - 11.1. [Interagindo com o Contrato](#111-interagindo-com-o-contrato)
+    - 11.2. [Decodificando a Resposta](#112-decodificando-a-resposta)
 12. [Autoria](#autoria)
 
 ---
 
 
-## 1. Introdução
+## <span id="1-introdução">1. Introdução</span>
 
 Bem-vindo ao tutorial sobre compilação e deploy de smart contracts utilizando a Foundry. Foundry é uma poderosa suíte de ferramentas de desenvolvimento para a Ethereum, projetada para oferecer eficiência e simplicidade para desenvolvedores de blockchain. Neste guia, vamos explorar como instalar o Foundry, criar um novo projeto, escrever um contrato simples em Solidity, e finalmente, deployá-lo na rede de testes Sepolia.
 
@@ -31,7 +31,6 @@ Para aproveitar ao máximo este tutorial, você precisa ter o seguinte:
 
 - Conhecimento básico de Solidity e desenvolvimento de smart contracts.
 - Um ambiente de desenvolvimento UNIX-like, como Linux ou macOS. Usuários do Windows precisarão do Windows Subsystem for Linux (WSL) instalado e configurado.
-- Rust e Git instalados em sua máquina.
 
 Prepare-se para configurar o ambiente de desenvolvimento, escrever o código Solidity, testar, e finalmente, fazer o deploy de seu contrato na rede blockchain. Vamos começar essa jornada empolgante no mundo do desenvolvimento Ethereum.
 
@@ -41,9 +40,9 @@ Prepare-se para configurar o ambiente de desenvolvimento, escrever o código Sol
 > Este tutorial foi elaborado com foco em usuários de sistemas operacionais UNIX, como Linux e macOS. Usuários do Windows podem encontrar dificuldades em seguir as instruções aqui apresentadas, devido às diferenças nos comandos e estruturas de diretórios.
 > 
 > É um requisito obrigatório o uso do Windows Subsystem for Linux (WSL), que permite a execução de um ambiente GNU/> Linux diretamente no Windows. Para instalar e configurar o WSL em seu sistema, recomendamos que siga o tutorial > em vídeo disponibilizado pela [hcode no YouTube](https://www.youtube.com/watch?v=_Wp2nWtTBBY&ab_channel=hcode) > que oferece uma visão prática e detalhada do processo de instalação:
-> 
-> <iframe width="560" height="315" src="https://www.youtube.com/embed/_Wp2nWtTBBY" title="YouTube video player" > frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" > allowfullscreen></iframe>
-> 
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/_Wp2nWtTBBY" title="YouTube video player" > frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" > allowfullscreen></iframe>
+
 > 
 > Além disso, para uma compreensão mais aprofundada e passos adicionais de instalação, consulte a [documentação > oficial da Microsoft sobre o WSL](https://learn.microsoft.com/pt-br/windows/wsl/install). Também é recomendável a > leitura do artigo "[Primeiros passos com WSL](https://dev.to/feministech/primeiros-passos-com-wsl-fk1)" para um > guia introdutório ao ambiente Linux no Windows.
 > 
@@ -120,7 +119,7 @@ A imagem e os comandos fornecidos são exemplos e devem ser adequados às suas n
 
 ---
 
-## 4. <span id="4-introduzindo-um-contrato-básico">Introduzindo um Contrato Básico</span
+## 4. <span id="4-introduzindo-um-contrato-básico">Introduzindo um Contrato Básico</span>
 
 Após a criação do seu projeto Foundry, o próximo passo é escrever seu primeiro contrato inteligente. Vamos começar com algo simples, um contrato que retorna "Hello, World!".
 
@@ -205,7 +204,7 @@ Este passo é crucial para assegurar que você possa cobrir os custos associados
 
 ---
 
-## 6. <span id="6-compilação-do-contrato">Compilação do Contrato</span
+## 6. <span id="6-compilação-do-contrato">Compilação do Contrato</span>
 
 Após desenvolver seu contrato inteligente em Solidity, o próximo passo antes de realizar o deploy é compilar o contrato para garantir que está livre de erros e pronto para ser executado na EVM (Ethereum Virtual Machine).
 
@@ -242,7 +241,7 @@ Lembre-se de que a compilação é uma etapa crucial no desenvolvimento de contr
 
 ---
 
-## 7. <span id="7-obtendo-url-rpc-via-alchemy">Obtendo URL RPC via Alchemy</span
+## 7. <span id="7-obtendo-url-rpc-via-alchemy">Obtendo URL RPC via Alchemy</span>
 
 Antes de realizar o deploy do seu contrato na rede Sepolia, é essencial obter um URL RPC (Remote Procedure Call). Esse URL é necessário para se conectar à rede blockchain e pode ser adquirido por meio de serviços como o Alchemy, que oferece acesso fácil a endpoints RPC.
 
@@ -276,7 +275,7 @@ Com o URL RPC em mãos, você está pronto para configurar o ambiente do seu pro
 
 ---
 
-## 8. <span id="8-configurando-variáveis-de-ambiente">Configurando Variáveis de Ambiente</span
+## 8. <span id="8-configurando-variáveis-de-ambiente">Configurando Variáveis de Ambiente</span>
 
 Antes de realizar o deploy do seu contrato, é fundamental configurar as variáveis de ambiente que serão utilizadas pelo Foundry. Isso inclui especificar a chave privada da carteira que fará o deploy e o URL RPC obtido no passo anterior.
 
@@ -293,8 +292,8 @@ touch .env
    - Abra o arquivo `.env` criado e adicione as seguintes linhas, substituindo `your_private_key` pela chave privada da sua carteira Ethereum e `your_rpc_url` pelo URL RPC que você copiou do Alchemy:
 
 ```env
-PRIVATE_KEY=your_private_key
-RPC_URL=your_rpc_url
+export PRIVATE_KEY=your_private_key
+export RPC_URL=your_rpc_url
 ```
 
 ### Importante:
@@ -322,11 +321,11 @@ Agora que as variáveis de ambiente estão configuradas, o próximo passo é uti
 
 ---
 
-## 9. <span id="9-deploy-do-contrato">Deploy do Contrato</span
+## 9. <span id="9-deploy-do-contrato">Deploy do Contrato</span>
 
 Após configurar suas variáveis de ambiente, o próximo passo é o deploy do seu contrato inteligente na rede Sepolia. O Foundry facilita esse processo com o uso do comando `forge`.
 
-### 9.1 <span id="91-executando-o-deploy">Executando o Deploy</span
+### 9.1 <span id="91-executando-o-deploy">Executando o Deploy</span>
 
 Para realizar o deploy do seu contrato, siga estas etapas:
 
@@ -371,11 +370,11 @@ O deploy bem-sucedido do seu contrato é um marco importante no desenvolvimento 
 
 ---
 
-## 10. <span id="10-verificando-o-deploy-na-rede">Verificando o Deploy na Rede</span
+## 10. <span id="10-verificando-o-deploy-na-rede">Verificando o Deploy na Rede</span>
 
 Após realizar o deploy do seu contrato inteligente, é crucial verificar se ele foi implantado corretamente e está funcionando na rede Sepolia. Isso inclui confirmar o deploy através do Etherscan da rede Sepolia e interagir com o contrato para testar suas funções.
 
-### 10.1 <span id="101-encontre-o-endereço-do-contrato-deployado">Encontre o Endereço do Contrato Deployado</span
+### 10.1 <span id="101-encontre-o-endereço-do-contrato-deployado">Encontre o Endereço do Contrato Deployado</span>
 
 1. **Encontre o Endereço do Contrato Deployado:**
    - Após o deploy, o Foundry irá fornecer o endereço do contrato implantado. Copie este endereço para uso posterior.
@@ -464,13 +463,9 @@ Este comando vai compilar seu contrato e fazer o deploy na rede Sepolia.
 
 ![alt text](./images/compile.png)
 
-## 9. <span id="8-verificando-o-deploy-na-rede">Verificando o Deploy na Rede</span>
+## Autoria
 
-Após o deploy, use a chave de API do Alchemy para verificar o status do seu contrato no [Etherscan Sepolia](https://sepolia.etherscan.io/) inserindo o endereço do contrato.
-
-![alt text](./images/deployed.png)
-
-## <span id="autoria">Autoria</span>
+Este documento foi criado por:
 
 - [Marcelo Feitoza](https://www.linkedin.com/in/marcelofeitoza7/)
 - [Victor Carvalho](https://www.linkedin.com/in/victor-severiano-de-carvalho/)
