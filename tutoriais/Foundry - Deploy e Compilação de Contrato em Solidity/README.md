@@ -58,7 +58,12 @@ Prepare-se para configurar o ambiente de desenvolvimento, escrever o código Sol
 curl -L https://foundry.paradigm.xyz | bash
 ```
 
-2. Após a conclusão do download, execute o comando abaixo para atualizar o Foundry para a versão mais recente:
+2. Rodar bash para atualizar seu sistema:
+```
+bash
+```
+
+3. Após a conclusão do download, execute o comando abaixo para atualizar o Foundry para a versão mais recente:
 
 ```sh
 foundryup
@@ -68,7 +73,8 @@ foundryup
 
 ```sh
 curl -L https://foundry.paradigm.xyz | bash
-bash foundryup
+bash
+foundryup
 ```
 ![Imagem representativa da instalação do Foundry](./images/foundryup.png)
 
